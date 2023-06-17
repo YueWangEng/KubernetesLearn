@@ -49,10 +49,10 @@ kubectl get all
 显示内容时，不限表头，可用例如，kubectl get pods --selector <items> —no headers
 只显示行数，kubectl get pods --selector <items> —no headers | wc -l
 
-14. taint 是针对node，可用kubectl命令配置
+14. taint 是针对node，可用kubectl命令配置   
     toleration是针对pod，只能用yaml配置
 
-15. 在指定的node部署pod
+16. 在指定的node部署pod
     1) yaml中使用nodeName指定
     2) 使用label
        可以先用kubectl get node --show-labels查看
