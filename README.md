@@ -48,3 +48,6 @@ kubectl get all
 13. 小tip
 显示内容时，不限表头，可用例如，kubectl get pods --selector <items> —no headers
 只显示行数，kubectl get pods --selector <items> —no headers | wc -l
+
+14. taint 是针对node，可用kubectl命令配置
+    toleration是针对pod，只能用yaml配置
