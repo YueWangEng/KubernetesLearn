@@ -51,3 +51,9 @@ kubectl get all
 
 14. taint 是针对node，可用kubectl命令配置
     toleration是针对pod，只能用yaml配置
+
+15. 在指定的node部署pod
+    1) yaml中使用nodeName指定
+    2) 使用label
+       可以先用kubectl get node --show-labels查看
+    3） 
