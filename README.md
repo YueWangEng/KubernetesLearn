@@ -40,7 +40,7 @@ kubectl get pod -n kube system
 2) 使用 kubectl replace —force -f <yaml>
 
 11. 根据selector筛选pod，可用
-kubectl get pods --selector <items1>,<items2>,… (逗号之间不可有空格）
+kubectl get pods --selector (items1),(items2),… (逗号之间不可有空格）
 
 12. 显示所有内容
 kubectl get all
