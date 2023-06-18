@@ -20,9 +20,9 @@ kubectl run redis --image redis123 --dry-run=client -o yaml > pod-redis.yaml
 5. Create a service redis-service to expose the redis application within the cluster on port 6379.   
 kubectl expose pod redis --port=6379 --name=redis-service   
 
-6. 创建对象
+6. 创建对象   
    1）不使用yaml file创建object的时候，只有pod才能用run(且无需只能关键字pod)，别的例如replicates, deployment，需使用create(且需指明关键字)   
-   kubectl create deployment webapp --image=kodekloud/webapp-color --replicas=3
+   kubectl create deployment webapp --image=kodekloud/webapp-color --replicas=3   
    2）但使用yaml file的时候，都用create，且无需只能关键字pod
    kubectl create –f pod-definition.yml）  
 
