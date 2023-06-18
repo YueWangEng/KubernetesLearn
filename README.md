@@ -56,4 +56,6 @@ kubectl get all
     1) yaml中使用nodeName指定
     2) 使用label
        可以先用kubectl get node --show-labels查看
-    3） 
+   
+17. 如果要在集群外部访问，可以通过端口转发实现（只适合临时测试用）：   
+kubectl port-forward service/test-k8s 8888:8080
