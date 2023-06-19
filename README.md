@@ -54,10 +54,11 @@ kubectl get all
 
 16. 在指定的node部署pod
     1) yaml中使用nodeName指定
-    2) 使用label
+    2) node使用label
        可以先用kubectl get node --show-labels查看
-       kubectl label nodes <node-name> <label-key>=<label-value>
-    3) 使用Node Affinity
+       kubectl label nodes <node-name> <label-key>=<label-value> <label-key>=<label-value> ... (可添加多个标签）
+       2.1）yaml使用nodeSelector
+       2.2）yaml使用Node Affinity
    
 17. 如果要在集群外部访问，可以通过端口转发实现（只适合临时测试用）：   
 kubectl port-forward service/test-k8s 8888:8080
