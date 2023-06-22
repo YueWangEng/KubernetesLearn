@@ -53,7 +53,7 @@ kubectl get all
     toleration是针对pod，只能用yaml配置   
 
 16. 在指定的node部署pod   
-    1）yaml中使用nodeName指定
+    1）yaml中使用nodeName指定   
     2）node使用label, pod 指定nodeSelector或者affinity:
     ```  
        2.1 对于node，
