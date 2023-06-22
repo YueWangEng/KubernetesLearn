@@ -62,6 +62,6 @@ kubectl get all
        2.2 对于pod
           yaml使用nodeSelector
           yaml使用Node Affinity
-   ```
+    ```
 18. 如果要在集群外部访问，可以通过端口转发实现（只适合临时测试用）：   
    kubectl port-forward service/test-k8s 8888:8080
