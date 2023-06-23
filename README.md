@@ -35,9 +35,9 @@ kubectl run httpd --image=httpd:alpine --port=80 --expose=true
 10. 检查有没有scheduler   
 kubectl get pod -n kube system   
 
-11. 更新yaml以后，重新生成pod，或者将pod从一个node转移到别的node。   
-1) 可先删除，再create   
-2) 使用 kubectl replace —force -f <yaml>   
+11. 更新yaml以后，重新生成pod，或者将pod从一个node转移到别的node。
+    1) 可先删除，再create
+    2) 使用 kubectl replace —force -f <yaml>   
 
 11. 根据selector筛选pod，可用   
 kubectl get pods --selector (items1),(items2),… (逗号之间不可有空格）   
