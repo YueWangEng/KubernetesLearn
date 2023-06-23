@@ -53,15 +53,16 @@ kubectl get all
     toleration是针对pod，只能用yaml配置   
 
 16. 在指定的node部署pod   
-    1）yaml中使用nodeName指定, 如nodeName: node01   
+    1）yaml中使用nodeName指定
+       如nodeName: node01   
     2）给node增加label, pod根据label指定nodeSelector或者affinity:
     ```  
        2.1 对于node，
           可以先用kubectl get node --show-labels查看  
           kubectl label nodes <node-name> <label-key>=<label-value> <label-key>=<label-value> ... (可添加多个标签）
        2.2 对于pod
-          yaml使用nodeSelector
-          yaml使用Node Affinity
+          2.2.1 yaml使用nodeSelector
+          2.2.2 yaml使用Node Affinity,注意key, operator, values之间的配合，例如：operator为in时，values值不可为空。   
     ```
 18. 如果要在集群外部访问，可以通过端口转发实现（只适合临时测试用）：   
    kubectl port-forward service/test-k8s 8888:8080
