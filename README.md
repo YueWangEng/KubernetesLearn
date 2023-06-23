@@ -54,7 +54,7 @@ kubectl get all
 
 16. 在指定的node部署pod   
     1）yaml中使用nodeName指定   
-    2）node使用label, pod 指定nodeSelector或者affinity:
+    2）给node增加label, pod根据label指定nodeSelector或者affinity:
     ```  
        2.1 对于node，
           可以先用kubectl get node --show-labels查看  
