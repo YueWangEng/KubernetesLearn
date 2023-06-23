@@ -14,8 +14,8 @@ kubectl run redis --image redis123 --dry-run=client -o yaml > pod-redis.yaml
 2）使用kubectl create deployment —help 命令：kubectl create deployment my-dep --image=nginx --replicas=3   
 
 4. ns   
-1) kubectl get ns   
-2) kubectl get pods —all-namespaces   
+   1) kubectl get ns   
+   2) kubectl get pods —all-namespaces   
 
 5. Create a service redis-service to expose the redis application within the cluster on port 6379.   
 kubectl expose pod redis --port=6379 --name=redis-service   
