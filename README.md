@@ -68,4 +68,4 @@ kubectl get all
    kubectl port-forward service/test-k8s 8888:8080
 
 19. 重启pod
-    方法之一： Kubectl replace --force -f <yaml>
+    方法之一： Kubectl replace --force -f (yaml)
