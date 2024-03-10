@@ -69,3 +69,5 @@ kubectl get all
 
 19. 重启pod
     方法之一： Kubectl replace --force -f (yaml)
+
+20. new
