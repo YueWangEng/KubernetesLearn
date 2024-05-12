@@ -67,7 +67,7 @@ kubectl get all
 18. 如果要在集群外部访问，可以通过端口转发实现（只适合临时测试用）：   
    kubectl port-forward service/test-k8s 8888:8080
 
-19. 重启pod
-    方法之一： Kubectl replace --force -f (yaml)
+19. 重启pod  
+    方法之一： Kubectl replace --force -f (yaml)，不需要delete再create
 
 20. new
