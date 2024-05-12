@@ -13,3 +13,14 @@
       或者运行kubectl get pods <pod-name> -n <namespace> -o yaml命令，kind: Node。
 6. static pod的配置文件一般在/etc/kubernetes/manifests    
    但也有特殊情况，这种情况下，要找到文件位置，需要查看config.yaml（该文件在/var/lib/kubelet中，不一定）。
+7. 在 Pod 的 YAML 文件中，可以在 spec 部分中使用 command 字段来定义容器的命令。用于指定容器启动时要执行的命令，通常用于覆盖容器镜像中默认的启动命令。    
+   方式一：command 字段应该是一个字符串数组，其中第一个元素是要执行的命令，后续元素是命令的参数。数组可以采用 
+         ```
+         ['command', 'arg1', ...]
+         ```
+         或者
+         ``` 
+          -'command'
+          - ‘arg1'
+          - '...'
+         ```
