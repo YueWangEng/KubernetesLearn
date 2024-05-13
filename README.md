@@ -1,7 +1,7 @@
 # KubernetesLearn
 
 1. 生成创建元素的yaml，采用 --dry-run=client -o yaml > pod-redis.yaml    
-例如：
+例如：  
 a) 生成元素，run/create  
 kubectl run redis --image redis123 --dry-run=client -o yaml   
 写入具体文件中   
