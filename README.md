@@ -1,9 +1,13 @@
 # KubernetesLearn
 
-1. 在生成pod时，显示yaml   
+1. 生成创建元素的yaml，采用 --dry-run=client -o yaml > pod-redis.yaml    
+例如：
+a) 生成元素，run/create  
 kubectl run redis --image redis123 --dry-run=client -o yaml   
 写入具体文件中   
 kubectl run redis --image redis123 --dry-run=client -o yaml > pod-redis.yaml   
+b) 修改元素，edit  
+有时候，即使无法修改，也没问题，系统会自动生成文件  
 
 2. 修改参数（pod, replicaset等）   
 1）修改生成的yaml文件    
@@ -15,7 +19,7 @@ kubectl run redis --image redis123 --dry-run=client -o yaml > pod-redis.yaml
 
 4. ns
    1) kubectl get ns
-   2) 2) kubectl get pods —all-namespaces   
+   2) kubectl get pods —all-namespaces   
 
 5. Create a service redis-service to expose the redis application within the cluster on port 6379.   
 kubectl expose pod redis --port=6379 --name=redis-service   
@@ -26,16 +30,16 @@ kubectl expose pod redis --port=6379 --name=redis-service
    2）但使用yaml file的时候，都用create，且无需只能关键字pod
    kubectl create –f pod-definition.yml）  
 
-8. kubectl create deployment redis-deploy --namespace=dev-ns  --image=redis --replicas=2   
+7. kubectl create deployment redis-deploy --namespace=dev-ns  --image=redis --replicas=2   
 按照yaml中的顺序，image放在namespace之后   
 
-9. Create a pod called httpd using the image httpd:alpine in the default namespace. Next, create a service of type ClusterIP by the same name (httpd). The target port for the service should be 80.   
+8. Create a pod called httpd using the image httpd:alpine in the default namespace. Next, create a service of type ClusterIP by the same name (httpd). The target port for the service should be 80.   
 kubectl run httpd --image=httpd:alpine --port=80 --expose=true   
 
-10. 检查有没有scheduler   
+9. 检查有没有scheduler   
 kubectl get pod -n kube system   
 
-11. 更新yaml以后，重新生成pod，或者将pod从一个node转移到别的node。
+10. 更新yaml以后，重新生成pod，或者将pod从一个node转移到别的node。
     1) 可先删除，再create
     2) 使用 kubectl replace —force -f <yaml>   
 
