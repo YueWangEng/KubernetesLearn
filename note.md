@@ -23,5 +23,7 @@
           - '...'
    ```
    方式二： 除了在 command 字段中直接指定命令外，您还可以使用 args 字段来为容器传递参数。
-8. 直接用语句修改arg (不修改command）  
+8. 直接用语句修改arg (不修改command）
+   ```
    kubectl run webapp-green --image=kodekloud/webapp-color -- --color=green
+   ```
