@@ -3,7 +3,9 @@
 1. cron, crontab, cronjob
 2. Controller: Deployment, ReplicaSet, StatefulSet, DaemonSet, CronJob.
 3. 命令行生成yaml file:    
+   ```
    kubectl create deployment --image=nginx nginx --dry-run=client -o yaml > nginx-deployment.yaml
+   ```
 4. resource, resource quota.
 5. 判定static pod
    1) 查看Pod的名称和命名空间: Static Pod通常运行在kube-system命名空间, 它们的名称通常会有节点名称作为后缀。
