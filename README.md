@@ -75,6 +75,16 @@ kubectl get all
     方法之一： Kubectl replace --force -f (yaml)，不需要delete再create
 
 20. k8s有各种资源对象，它们是Kubernetes API中定义的各种实体，用于表示集群的状态、配置、规范等通常。  
-通过YAML或JSON格式的文件定义，然后使用kubectl命令行工具或API调用来创建、更新、删除和管理这些资源。
 常见的有：  
 Pods, Services, Deployments, ReplicaSets, StatefulSets, DaemonSets, Jobs, CronJobs, Ingress, PVC, ConfigMaps, Secrets, Namespaces, ResourceQuotas, NetworkPolicies, RBAC, CRD.
+
+每个资源对象都有一个特定的API版本和种类（Kind），并且通常包含以下几个部分：
+```
+API版本（API Version）：指定使用的Kubernetes API版本，例如v1、apps/v1等。
+种类（Kind）：指定资源的类型，如Pod、Service、Deployment等。
+元数据（Metadata）：包含了资源的名称、命名空间、标签和其他标识信息。
+规范（Spec）：定义了资源的期望状态。对于不同的资源类型，规范中的字段会有所不同。
+状态（Status）：表示资源的当前状态。这是由Kubernetes系统维护的，反映了资源的实际状态。
+```
+资源对象通过YAML或JSON格式的文件定义 (这些文件通常被称为清单文件, manifest files)，然后使用kubectl命令行工具或API调用来创建、更新、删除和管理这些资源。
+
