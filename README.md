@@ -74,4 +74,7 @@ kubectl get all
 19. 重启pod  
     方法之一： Kubectl replace --force -f (yaml)，不需要delete再create
 
-20. new
+20. k8s有各种资源对象，它们是Kubernetes API中定义的各种实体，用于表示集群的状态、配置、规范等通常。  
+通过YAML或JSON格式的文件定义，然后使用kubectl命令行工具或API调用来创建、更新、删除和管理这些资源。
+常见的有：  
+Pods, Services, Deployments, ReplicaSets, StatefulSets, DaemonSets, Jobs, CronJobs, Ingress, PVC, ConfigMaps, Secrets, Namespaces, ResourceQuotas, NetworkPolicies, RBAC, CRD.
