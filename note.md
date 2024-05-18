@@ -29,3 +29,4 @@
    ```
    kubectl run webapp-green --image=kodekloud/webapp-color -- --color=green
    ```
+9. 区分ConfigMaps（一种资源对象，用于存储配置数据）和manifest（清单文件,资源对象的定义文件）
