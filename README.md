@@ -75,8 +75,8 @@ kubectl get all
     方法之一： Kubectl replace --force -f (yaml)，不需要delete再create
 
 20. k8s有各种资源对象，它们是Kubernetes API中定义的各种实体，用于表示集群的状态、配置、规范等通常。  
-常见的有：  
-Pods, Services, Deployments, ReplicaSets, StatefulSets, DaemonSets, Jobs, CronJobs, Ingress, PVC, ConfigMaps, Secrets, Namespaces, ResourceQuotas, NetworkPolicies, RBAC, CRD.
+>常见的有：  
+>Pods, Services, Deployments, ReplicaSets, StatefulSets, DaemonSets, Jobs, CronJobs, Ingress, PVC, ConfigMaps, Secrets, Namespaces, ResourceQuotas, NetworkPolicies, RBAC, CRD.
 
 每个资源对象都有一个特定的API版本和种类（Kind），并且通常包含以下几个部分：
 ```
