@@ -32,3 +32,4 @@
 9. 区分ConfigMaps（一种资源对象，用于存储配置数据）和manifest（清单文件,资源对象的定义文件）
 10. Kubernetes 中的 ConfigMap 和 Secret 的格式相似。  
     ConfigMap 用于存储非敏感的配置数据，是明文存储的。Secret 用于存储敏感的信息，是加密存储的。
+11. 区分pod(Kubernetes 中的基本部署单元)和instance(实例，非k8s概念）
