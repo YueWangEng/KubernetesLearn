@@ -121,3 +121,7 @@ API版本（API Version）：指定使用的Kubernetes API版本，例如v1、ap
 22. DNS  
     Kubernetes中的DNS服务器是一个关键组件，确保服务和Pod能够通过名称互相发现和通信。它是Kubernetes集群中的一个核心部分，负责为集群内的服务提供DNS解析功能，使得服务之间可以通过名称而不是IP地址进行通信。  
     CoreDNS作为默认的DNS服务提供了灵活和可靠的DNS解析功能，帮助简化了集群内的网络通信。
+    ```
+    看DNS服务Pod状态：k8s-app=kube-dns 标签通常用于标识 Kubernetes DNS 服务的 Pod。
+    kubectl get pods -n kube-system -l k8s-app=kube-dns
+    ```
